@@ -1,0 +1,4 @@
+instance_id,n_vars,n_clauses,method,satisfiable,time_seconds,solution
+3,4,10,BackTracking,U,4.340289160609245e-05,{}
+4,4,10,BackTracking,S,2.5080982595682144e-05,"{1: 1, 2: 0, 3: 0, 4: 0}"
+5,4,10,BackTracking,S,1.8342863768339157e-05,"{1: 0, 2: 0, 3: 1, 4: 1}"

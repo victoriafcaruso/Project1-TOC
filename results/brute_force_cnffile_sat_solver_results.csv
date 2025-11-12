@@ -1,0 +1,4 @@
+instance_id,n_vars,n_clauses,method,satisfiable,time_seconds,solution
+3,4,10,BruteForce,U,7.23530538380146e-05,{}
+4,4,10,BruteForce,S,3.234017640352249e-05,"{1: 1, 2: 0, 3: 0, 4: 0}"
+5,4,10,BruteForce,S,9.748153388500214e-06,"{1: 0, 2: 0, 3: 1, 4: 1}"
