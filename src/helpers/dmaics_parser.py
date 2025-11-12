@@ -1,5 +1,5 @@
 import os
-from typing import List, Tuple
+from typing import List, Tuple, Any
 
 def parse_multi_instance_dimacs(path: str) -> Tuple[str, int, List[List[int]]]:
     """
@@ -99,4 +99,29 @@ def parse_multi_instance_bin_packing(path: str):
     for temp_line in lines:
         line = [int(line) for line in temp_line.split(" ")]
         instances.append(line)
+    return instances
+    
+def parse_cnf_instances_hamilton(filename):
+    instances = []
+    current_instance: dict[str, Any] = {}
+    with open(filename, "r") as f:
+        for line in f:
+            line = line.strip()
+            if not line:
+                continue
+            if line.startswith("c INSTANCE"):
+                if current_instance:
+                    instances.append(current_instance)
+                instance_id = int(line.split()[-1])
+                current_instance = {"id": instance_id, "vertices": set(), "edges": []}
+            elif line.startswith("p edge"):
+                parts = line.split()
+                current_instance["num_vertices"] = int(parts[2])
+                current_instance["num_edges"] = int(parts[3])
+            elif line.startswith("e"):
+                u, v = map(int, line.split()[1:])
+                current_instance["edges"].append((u, v))
+                current_instance["vertices"].update([u, v])
+        if current_instance:
+            instances.append(current_instance)
     return instances
