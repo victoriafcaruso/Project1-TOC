@@ -38,6 +38,7 @@ def run_solver_and_write_csv(instances, out_csv, method_name, solver_func):
             nvars_list.append(n_vars)
             times_list.append(dt)
             sat_flags.append(ok)
+        print(f"\nResults written to {out_csv}")
 
     return nvars_list, times_list, sat_flags
 
