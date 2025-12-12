@@ -1,0 +1,15 @@
+TwoNonconsecutiveOnes
+q0,q1,q2,qacc
+0,1
+0,1,X,_
+q0
+qacc
+qreject
+q0,0,q0,0,R
+q0,1,q0,1,R
+q0,1,q1,X,L
+q1,0,q1,0,L
+q1,1,q1,1,L
+q1,1,q2,X,R
+q2,0,qacc,0,S
+q2,1,qacc,1,S

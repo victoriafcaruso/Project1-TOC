@@ -1,0 +1,26 @@
+EqualZerosAndOnes
+q0,q1,q2,q3,q4,q5, q6,qacc
+2,0,1
+2,0,1,X,_
+q0
+qacc
+qreject
+q0,2,q1,2,R
+q1,1,q2,X,L
+q1,0,q3,0,R
+q1,X,q1,X,R
+q3,1,q2,X,L
+q3,0,q3,0,R
+q3,X,q3,X,R
+q2,1,q2,1,L
+q2,0,q2,0,L
+q2,X,q2,X,L
+q2,2,q4,2,R
+q4,X,q4,X,R
+q4,1,q4,1,R
+q4,0,q5,X,L
+q5,1,q5,1,L
+q5,0,q5,0,L
+q5,X,q5,X,L
+q5,2,q1,2,R
+q1,_,qacc,_,S

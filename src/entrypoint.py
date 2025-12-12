@@ -17,5 +17,6 @@ def main():
         ntm.run(args.input_string, args.max_depth)
     else:
         # Program 2 (k-tape)
-        ktape = KTape_DTM(args.file)
-        ktape.run(args.input_string, args.max_depth)
+        print("No k-tape solution!")
+        #ktape = KTape_DTM(args.file)
+        #ktape.run(args.input_string, args.max_depth)
